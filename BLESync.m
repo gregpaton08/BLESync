@@ -166,6 +166,10 @@
     return true;
 }
 
+- (BOOL) openNextFile {
+    return [self openFile:[self getNextFileName]];
+}
+
 - (NSString*) readLine {
     if ([currentLine length] > 2 && [[currentLine substringToIndex:3] isEqualToString:@"EOF"])
         return @"EOF";
@@ -180,6 +184,9 @@
 }
 
 - (BOOL) deleteFile:(NSString*)file {
+    
+    [self updateFiles];
+    
     return true;
 }
 

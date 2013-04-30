@@ -30,6 +30,7 @@
 - (NSMutableArray*) getFileNames;
 - (NSString*) getNextFileName;
 - (BOOL) openFile: (NSString*)file;
+- (BOOL) openNextFile;
 - (NSString*) readLine;
 - (BOOL) deleteFile:(NSString*)file;
 
